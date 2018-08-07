@@ -1,0 +1,1 @@
+This folder exists because otherwise the placeholder ESDoc config throws an error.
