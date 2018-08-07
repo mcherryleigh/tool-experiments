@@ -567,7 +567,7 @@
     "__docId__": 48,
     "kind": "file",
     "name": "src/MyClass.js",
-    "content": "/**\r\n * this is MyClass.\r\n * @desc A class description\r\n */\r\nmodule.exports = class MyClass {\r\n  /**\r\n   * @access public\r\n   * @desc A method description\r\n   * @example\r\n   * console.log('do something')\r\n   * @since 0.0.0\r\n   * @param {number} a - this is a value.\r\n   * @param {number} b - this is a value.\r\n   * @return {number} result of the sum value.\r\n   */\r\n  sum(a, b){\r\n    return a + b;\r\n  }\r\n}\r\n\r\n",
+    "content": "/**\n * this is MyClass.\n * @desc A class description\n */\nmodule.exports = class MyClass {\n  constructor() {\n    // airbnb thinks I shouldn't have class methods without calling `this`. Here's a dumb example\n    this.counter = 0;\n  }\n\n  /**\n   * @access public\n   * @desc A method description\n   * @example\n   * console.log('do something')\n   * @since 0.0.0\n   * @param {number} a - this is a value.\n   * @param {number} b - this is a value.\n   * @return {number} result of the sum value.\n   */\n  sum(a, b) {\n    this.tempVar += 1;\n    return a + b;\n  }\n};\n",
     "static": true,
     "longname": "/home/travis/build/mcherryleigh/tool-experiments/src/MyClass.js",
     "access": "public",
@@ -591,6 +591,37 @@
   },
   {
     "__docId__": 50,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/MyClass.js~MyClass",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/MyClass.js~MyClass#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 6,
+    "undocument": true
+  },
+  {
+    "__docId__": 51,
+    "kind": "member",
+    "name": "counter",
+    "memberof": "src/MyClass.js~MyClass",
+    "static": false,
+    "longname": "src/MyClass.js~MyClass#counter",
+    "access": "public",
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "type": {
+      "types": [
+        "number"
+      ]
+    }
+  },
+  {
+    "__docId__": 52,
     "kind": "method",
     "name": "sum",
     "memberof": "src/MyClass.js~MyClass",
@@ -603,7 +634,7 @@
     "examples": [
       "console.log('do something')"
     ],
-    "lineNumber": 16,
+    "lineNumber": 21,
     "since": "0.0.0",
     "params": [
       {
@@ -637,6 +668,23 @@
     }
   },
   {
+    "__docId__": 53,
+    "kind": "member",
+    "name": "tempVar",
+    "memberof": "src/MyClass.js~MyClass",
+    "static": false,
+    "longname": "src/MyClass.js~MyClass#tempVar",
+    "access": "public",
+    "description": null,
+    "lineNumber": 22,
+    "undocument": true,
+    "type": {
+      "types": [
+        "number"
+      ]
+    }
+  },
+  {
     "kind": "index",
     "content": "# tool-experiments\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/mcherryleigh/tool-experiments.svg)](https://greenkeeper.io/)\n[![Coverage Status](https://coveralls.io/repos/github/mcherryleigh/tool-experiments/badge.svg?branch=master)](https://coveralls.io/github/mcherryleigh/tool-experiments?branch=master)\n[![Build Status](https://travis-ci.org/mcherryleigh/tool-experiments.svg?branch=master)](https://travis-ci.org/mcherryleigh/tool-experiments)\n\n[Documentation created when master updates](https://mcherryleigh.github.io/tool-experiments)",
     "longname": "/home/travis/build/mcherryleigh/tool-experiments/README.md",
@@ -646,7 +694,7 @@
   },
   {
     "kind": "packageJSON",
-    "content": "{\n  \"name\": \"tool-experiments\",\n  \"scripts\": {\n    \"ci:sendCoverage\": \"nyc report --reporter=text-lcov | coveralls\",\n    \"esdoc\": \"esdoc\",\n    \"test\": \"nyc ava\",\n    \"test:watch\": \"npm test -- --watch\"\n  },\n  \"devDependencies\": {\n    \"ava\": \"0.25.0\",\n    \"coveralls\": \"3.0.2\",\n    \"esdoc\": \"1.1.0\",\n    \"esdoc-lint-plugin\": \"^1.0.2\",\n    \"esdoc-node\": \"1.0.3\",\n    \"esdoc-standard-plugin\": \"1.0.0\",\n    \"nyc\": \"12.0.2\"\n  },\n  \"dependencies\": {}\n}\n",
+    "content": "{\n  \"name\": \"tool-experiments\",\n  \"scripts\": {\n    \"ci:sendCoverage\": \"nyc report --reporter=text-lcov | coveralls\",\n    \"esdoc\": \"esdoc\",\n    \"eslint\": \"eslint\",\n    \"test\": \"nyc ava\",\n    \"test:watch\": \"npm test -- --watch\"\n  },\n  \"devDependencies\": {\n    \"ava\": \"0.25.0\",\n    \"coveralls\": \"3.0.2\",\n    \"esdoc\": \"1.1.0\",\n    \"esdoc-lint-plugin\": \"1.0.2\",\n    \"esdoc-node\": \"1.0.3\",\n    \"esdoc-standard-plugin\": \"1.0.0\",\n    \"eslint\": \"5.3.0\",\n    \"eslint-config-airbnb-base\": \"13.0.0\",\n    \"eslint-plugin-import\": \"2.13.0\",\n    \"nyc\": \"12.0.2\"\n  },\n  \"dependencies\": {}\n}\n",
     "longname": "/home/travis/build/mcherryleigh/tool-experiments/package.json",
     "name": "package.json",
     "static": true,
@@ -677,10 +725,10 @@
     "access": "public"
   },
   {
-    "__docId__": 51,
+    "__docId__": 54,
     "kind": "testFile",
     "name": "test/test.js",
-    "content": "import test from 'ava';\r\nimport MyClass from '../src/MyClass'\r\n\r\n/** @test {MyClass.sum} */\r\ntest('1+1=2', async t => {\r\n  let calc  = new MyClass()\r\n  let sum = calc.sum(1,1)\r\n  t.is(sum, 2);\r\n});",
+    "content": "import test from 'ava';\nimport MyClass from '../src/MyClass';\n\n/** @test {MyClass.sum} */\ntest('1+1=2', async (t) => {\n  const calc = new MyClass();\n  const sum = calc.sum(1, 1);\n  t.is(sum, 2);\n});\n",
     "static": true,
     "longname": "/home/travis/build/mcherryleigh/tool-experiments/test/test.js",
     "access": null,
@@ -688,7 +736,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 52,
+    "__docId__": 55,
     "kind": "test",
     "name": "test0",
     "testId": 0,

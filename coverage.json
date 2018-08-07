@@ -1,12 +1,16 @@
 {
-  "coverage": "100%",
-  "expectCount": 2,
+  "coverage": "40%",
+  "expectCount": 5,
   "actualCount": 2,
   "files": {
     "src/MyClass.js": {
-      "expectCount": 2,
+      "expectCount": 5,
       "actualCount": 2,
-      "undocumentLines": []
+      "undocumentLines": [
+        6,
+        8,
+        22
+      ]
     }
   }
 }

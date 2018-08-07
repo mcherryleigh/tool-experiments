@@ -300,10 +300,28 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "src/myclass.js~myclass#constructor",
+    "class/src/MyClass.js~MyClass.html#instance-constructor-constructor",
+    "src/MyClass.js~MyClass#constructor",
+    "method"
+  ],
+  [
+    "src/myclass.js~myclass#counter",
+    "class/src/MyClass.js~MyClass.html#instance-member-counter",
+    "src/MyClass.js~MyClass#counter",
+    "member"
+  ],
+  [
     "src/myclass.js~myclass#sum",
     "class/src/MyClass.js~MyClass.html#instance-method-sum",
     "src/MyClass.js~MyClass#sum",
     "method"
+  ],
+  [
+    "src/myclass.js~myclass#tempvar",
+    "class/src/MyClass.js~MyClass.html#instance-member-tempVar",
+    "src/MyClass.js~MyClass#tempVar",
+    "member"
   ],
   [
     "test/test.js",

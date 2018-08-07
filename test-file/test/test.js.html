@@ -36,14 +36,15 @@
 
 <div class="content" data-ice="content"><h1 data-ice="title">test/test.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import test from &apos;ava&apos;;
-import MyClass from &apos;../src/MyClass&apos;
+import MyClass from &apos;../src/MyClass&apos;;
 
 /** @test {MyClass.sum} */
-test(&apos;1+1=2&apos;, async t =&gt; {
-  let calc  = new MyClass()
-  let sum = calc.sum(1,1)
+test(&apos;1+1=2&apos;, async (t) =&gt; {
+  const calc = new MyClass();
+  const sum = calc.sum(1, 1);
   t.is(sum, 2);
-});</code></pre>
+});
+</code></pre>
 
 </div>
 
