@@ -1,3 +1,0 @@
-# INDEX
-
-Index placeholder

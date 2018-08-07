@@ -1,1 +1,1 @@
-This folder exists because otherwise the placeholder ESDoc config throws an error.
+Placeholder for assets (like images) used in the manual markdown files in esdoc generation.
